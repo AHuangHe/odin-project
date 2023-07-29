@@ -1,0 +1,22 @@
+The cascade of CSS
+  - The cascade is what determines which rules actually get applied to our HTML
+  - There are different factors that the cascade uses to determine this, 3 of which are:
+    - Specificity
+      - A more specific CSS declaration will take precedence over less specific ones
+      - Inline styles have the highest specificity
+      - Otherwise:
+        - ID selectors (most specific selector)
+        - Class selectors
+        - Type selectors
+      - Serves as a tie-breaker when an item has multiple conflicting declarations
+      - A larger amount of selectors will beat a single selector (i.e. 2 class selectors vs only 1)
+      - The universal selector (*) and combinators (+, ~, >, empty space) don't add any specificity
+
+    - Inheritance
+      - CSS properties that, when applied to an element, are inherited by that element's descendants
+      - Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren't
+      - Directly targeting an element always beats inheritance
+
+    - Rule Order
+      - What happens when every other factor has been taken into account and there are still multiple conflicting rules?
+      - The end of the line: Whichever rule was the last defined is the winner
