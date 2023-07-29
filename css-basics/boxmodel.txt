@@ -70,3 +70,31 @@ The Box Model
   - Vertical margins will collapse (overlap), forming a single margin equal to the largest margin
   - Margin collapse also applies to nested elements
   - Negative margins pulls other elements toward the element
+
+Block vs Inline:
+- Most elements are block elements
+- By default, block elements will appear on the page stacked atop each other, each new element starting on a new line
+- Inline elements don't start on a new line, they appear in line with whatever elements they are placed beside
+- A clear example of an inline element <a>, it will behave like a part of a paragraph
+- Padding and margin behave differently on inline elements (in general don't put extra padding or margin on them)
+
+- Inline-block elements behave like inline elements, but with block-style padding and margin
+- Useful to know, but in practice, using flexbox will be the way to go
+
+Divs and Spans:
+- They give no particular meaning to their content, they are just generic boxes that can contain anything
+- We can give an id or class to target them for styling with CSS
+- Another use case is grouping related elements under one parent element to correctly position them on the page
+- Div is a block-level element by default. Commonly used as a container element to group other elements
+- Span is an inline-level element by default. Can be used to group text content and inline HTML elements for styling
+  - Should only be used when no other semantic HTML element is appropriate
+
+Normal Flow:
+- By default, a block-level element's content fills the available inline space of the parent element containing it
+- The size of inline-level elements is just the size of their content
+- The normal layout flow is the system by which elements are placed inside the browser's viewport
+- By default, block-level elements are laid out in the block flow direction
+- Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified
+- Inline elements don't appear on new lines (they all sit on the same line along with any adjacent/wrapped text content)
+  as long as there is apace for them to do so inside the width of the parent block-level element
+- If there isn't space, then the overflowing content will move down to a new line
