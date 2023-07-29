@@ -1,0 +1,117 @@
+Universal selector:
+
+* {
+  property: value;
+}
+
+
+Type selector:
+- Modifies every html element with the modified tag/type
+- In the following case, all of the elements with the <div> tag would be modified
+
+div {
+  property: value;
+}
+
+
+Class selector:
+- Modifies every html element that has the class
+- Multiple html elements can have the same class
+- An html element can have multiple classes
+- A class is indicated in CSS by a dot in front of the name
+
+<div class="tmp">Temp</div>
+
+.tmp {
+  property: value;
+}
+
+
+ID selector:
+- Modifies every html element that has the ID
+- An element can only have 1 ID
+- An ID cannot be repeated on a single page and should not contain any whitespace
+- An ID is indicated in CSS by a hashtag (#) in front of the name
+- IDs should be used sparringly if at all
+
+<div id="title">Title</div>
+
+#title {
+  property: value;
+}
+
+
+Grouping selector:
+- We can group 2 or more selectors if they contain some of the same properties and values
+- To group selectors, we can make a comma-separated list with each grouped selector
+
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+
+
+Chaining selectors:
+- We can chain two or more selectors (unless they are type selectors) if an html element has multiple classes (or other attributes)
+- To chain selectors, we can make a non-separated list with each selector
+- We can also chain a class and an ID together (.class#id)
+- In general, we can't chain more than one type selector since an element can't be two different types at once (can't be <div> and <p> at the same time)
+
+<div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection preview">This is where a preview for a post might go.</p>
+</div>
+
+.subsection.header {
+  color: red;
+}
+
+
+Descendant combinator:
+- Allows us to combine multiple selectors differently than either grouping or chaining them, as they show a relationship between the selectors
+- We can represent a descendant combinator as a space-separated list
+- It will only cause elements that match the last selector to be selected if they also have an ancestor that matches the previous selector
+- A child will only be selectted if it is nested inside of ancestor, no matter how deep
+- In the following example, only B and C would be selected 
+
+<div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"></div>
+<!-- D -->
+
+.ancestor .contents {
+  /* some declarations */
+}
+
+
+Order matters!
+- When two selectors have the same level of specificity, the last rule defined has the most precedence (overwrites any rules before it)
+- In the example below, any element with both first_declared and last_declared will only have properties in the last_declared that are overlaped with previous ones (like font-size)
+
+.first_declared, .last_declared {
+  background-color: rgb(200, 50, 150);
+  font-weight: 800;
+}
+.first_declared {
+  color: rgb(50, 50, 200);
+  font-size: 32px;
+}
+.last_declared {
+  font-size: 14px;
+  font-weight: 800;
+}

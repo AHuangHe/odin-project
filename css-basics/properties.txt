@@ -1,0 +1,41 @@
+Most common properties to work with in CSS:
+
+- Color and background-color
+  - Color sets an element's text color, while background-color sets the background
+  - These can accept color keywords (like red), as well as HEX, RGB, and HSL values
+  p {
+    /* hex example: */
+    color: #1100ff;
+    }
+
+  p {
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+    }
+
+  p {
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+    }
+
+- Typography basics and text-align
+  - font-family can be a single value or a comma-separated list of values that determine what font an element uses
+    - Each font will fall into one of two categories:
+      - either a "font family name" like "Times New Roman"
+      - or a "generic family name" like sans-serif (no need for quotations)
+      - If a browser can't find/doesn't support the first font in a list, it will try to move down the list until it finds one
+      - Preferrably go from "font family name" that you most want to a generic font family as a fallback
+  - font-size will set the size of the font
+    - When giving a value, the value should not contain any whitespace, e.g. font-size:22px
+  - font-weight affects the boldness of text, assuming the font supports the specified weight
+    - The value can be a keyword (like font-weight:bold) or a number between 1 and 1000 (like font-weight:700) (usually in increments of 100)
+  - text-align will align text horizontally within an element, and you can use common keywords like center, left, right, etc.
+
+- Image height and width
+  - By default, the <img> element's height and width values will be the same as the file's dimensions.
+  - To modify the size without changing the proportions, we can set the img's height to auto and only change the width
+  - It is best to include these properties even if not planning to adjust them (will reserve a space in the page for the image)
+  img {
+    height: auto;
+    width: 500px;
+  }

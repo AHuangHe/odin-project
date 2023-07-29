@@ -1,0 +1,31 @@
+There are 3 ways to add CSS to HTML
+
+- External CSS
+  - The most common method, which involves creating a separate file for the CSS 
+    and linking it inside of an HTML's opening and closing <head> tags with a self-closing <link> element
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  - The href attribute is the location of the CSS file (absolute or relative)
+  - The rel attribute is required, and 
+    it specifies the relationship between the HTML file and the linked file
+  - Pros:
+    - Keeps HTML and CSS separated, making them look cleaner
+    - We only need to edit the CSS in one place
+
+- Internal (Embedded) CSS
+  - Involves adding the CSS within the HTML file itself
+  - You place all the rules inside of a pair of opening and closing <style> tags,
+    which are then placed inside of the opening and closing <head> tags of the HTML file.
+  - This method can be useful for adding unique styles to a single page of a website,
+    but it doesn't keep things separate like the external method
+
+- Inline CSS
+  - Makes it possible to add styles directly to HTML elements, though not as recommended
+  - No need to use any selectors (we use the style= attribute inside a tag)
+  - Can work fine if you need to add a unique style for a single element
+  - Cons:
+    - The file can quickly become messy and bloated
+    - For many elements to have the same style, 
+      you would have to copy and paste the same style to each element
+    - It can override either of the 2 previous methods
