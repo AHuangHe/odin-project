@@ -1,0 +1,72 @@
+The Box Model
+- Every single thing on a webpage is a rectangular Box
+- These can have other boxes in them and can sit alongside one another
+- Box Elements:
+  - content: space where the content is displayed; size it using properties like inline-size and block-size or width and height
+  - padding: space between the border of a box and the content of a box
+  - margin: space between the borders of a box and the borders of adjacent boxes
+  - border: space between the padding and the margin of a box
+- Useful Properties:
+  - background-color
+  - color
+  - height and width
+  - border -> size type color
+  - display -> inline-size and block-size or width and height
+  * box-sizing: border-box -> makes it so that the height and width of the entire box 
+                                    (2*padding + 2*border + actual box space) are equal to the defined height and width
+- Types:
+  - We can fit boxes into block boxes and inline boxes
+  - The type refers to how the box behaves in terms of page flow and in relation to other boxes
+  - Boxes have an inner display type and an outer display type
+  - You can set various values for the display type using the display property
+  - Outer Display Type:
+    - The box will break onto a new line
+    - The width and height properties are respected
+    - Padding, margin, and border will cause other elements to be pushed away from the box
+    - If width unspecified, the box will extend in the inline direction to fill the space available in its container
+    - If it has an outer display type of *inline*:
+      - The box will not break onto a new line
+      - The width and height properties will not apply
+      - Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box
+      - Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box
+    - <h1> and <p> use block as their outer display type by default
+  - Inner Display Type:
+    - Dictates how elements inside that box are laid out
+    - Block + inline layout is the default way things behave on the web
+    - By default, elements inside a box are also laid out in normal flow and behave as block or inline boxes
+    - Setting display: flex;, the element will still use the outer display type block but this changes the inner display to flex
+      - Any direct children of this box will become flex items and behave like a Flexbox
+    - <a>, <span>, <em>, and <strong> use inline as their outer display type by default
+  - The key thing to remember for now is: Changing the value of the display property can change whether the outer display type of a box is block or inline. 
+    This changes the way it displays alongside other elements in the layout.
+  - Example of how to use box-sizing (The alternative box model - common)
+    html {
+      box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+    - Setting box-sizing in html and set all other elements to inherit that value
+
+- Using display: inline-block
+  - Special value of display, which provides a middle ground between inline and block.
+  - Use it if you do not want an item to break onto a new line, but do want it to respect width and height and avoid overlapping
+    - Width and height properties are respected
+    - Padding, margin, and border will cause other elements to be pushed away from the box
+  - This can be useful when you want to give a link a larger hit area by adding padding.
+  - By using inline-block, you can allow padding to be set to an element like <a> (an inline element like <span>)
+  - This can be seen frequently in navigation bars
+  - Example: you can use it to make sure the padding is respected by other elements
+
+- Margins:
+  - Margins are set using lengths, percentages, or the keyword auto and can have negative values.
+  - Can accept 4 values (one for each side); if fewer than 4, then it will autocomplete the other ones
+  - If only 1 value, all 4 margins will be the same value
+  - In most cases, a value of auto will be 0 or else whatever space is available on any side
+  - Auto is handy for horizontal centering (only)
+  - Without a specified width, the auto values would essentially have no effect
+  - Vertical margins will collapse (overlap), forming a single margin equal to the largest margin
+  - Margin collapse also applies to nested elements
+  - Negative margins pulls other elements toward the element
