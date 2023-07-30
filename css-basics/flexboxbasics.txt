@@ -1,0 +1,13 @@
+Flexbox
+- A relatively new way to organize elements in a webpage
+- It has become the default way of positioning elements
+- Inspecting and debugging things using dev tools will be crucial
+- Flexbox is a way to arrange items into rows or columns
+- These items will flex (grow or shrink) based on some simple rules that you can define
+
+Flex container and Flex items
+- A flex container is any element that has display: flex on it
+- A flex item is any element that lives directly inside of a flex container
+- Any element can be both a flex container and a flex item
+  - You can also put diplay: flex on a flex item and then use flexbox to arrange its children
+- Creating and nesting multiple flex containers and items is the primary way to build complex layouts
