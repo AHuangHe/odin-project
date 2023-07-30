@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;
+  padding: 20px 0;
+  display: flex; /* Enables the flexbox layout mode */
+  justify-content: center; /* Allows us to align the items*/
+}
+
+.menu {
+  /* border: 1px solid #fff;  For debugging */
+  width: 900px;
+  display: flex;
+  justify-content: space-between; /* Spreads items out across the width but only adds spaces between items */
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertical alignment */
+}

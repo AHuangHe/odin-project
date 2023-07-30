@@ -11,3 +11,22 @@ Flex container and Flex items
 - Any element can be both a flex container and a flex item
   - You can also put diplay: flex on a flex item and then use flexbox to arrange its children
 - Creating and nesting multiple flex containers and items is the primary way to build complex layouts
+
+- The first step in using flexbox is to turn one of our HTML elements into a flex container
+- We do this with the display property, giving it a value of flex
+- Explicitly defining flex containers means that you can mix and match flexbox with other layout models
+- After getting a flex container, the next job is to define the horizontal alignment of its items
+  - We use the justify-content property for this
+  - justify-content: center has the same effect as adding a margin: 0 auto declaration to the element to center (flex item)
+  - flex-start and flex-end values would align the elements to the left and right respectively
+  - space-around and space-between are useful with multiple flex items
+  - space-around -> spreads items out across 
+  - space-between -> like around but only adds space between items
+- We can also group flex items (inside a div) to add more complexity
+- For vertical alignment, we can use the property align-items: value
+  - the values are smilar to justify-content:
+    - center
+    - flex-start (top)
+    - flex-end (bottom)
+    - stretch (fills the whole space vertically)
+    - baseline
