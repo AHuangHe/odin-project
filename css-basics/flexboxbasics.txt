@@ -69,4 +69,4 @@ Auto-Margins
 - Basically a "divider" for flex items in the same container 
 - Auto-margins eat up all the extra space in a flex container, moves the item and any following items to the right side of the container
 
-Link for flexbox tutorial: https://internetingishard.netlify.app/html-and-css/flexbox/index.html#summary
+Link for flexbox tutorial: https://internetingishard.netlify.app/html-and-css/flexbox/index.html
