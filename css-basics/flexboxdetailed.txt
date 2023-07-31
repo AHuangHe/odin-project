@@ -7,3 +7,10 @@ Growing and Shrinking
   - Setting it to auto tells the item to check for a width declaration
   - The default value is auto, but once you set a single value to flex, its value becomes 0
   - A value of flex: auto is interpreted as flex: 1 1 auto
+
+Axes (flex-direction property)
+- A flexbox can work horizontally (the default) or vertically
+- When changing the div to columns, we have to be mindful
+  - Empty divs by default have 0 height, so if we set flex to 1, we are setting flex-basis to 0, which tells the div to start the height at 0
+  - All the 3 properties now affect the height and not the width
+  - Changin the div to column adds complexity because block-level elements default to the height of their content, and if there is no content then the above issue could happen
