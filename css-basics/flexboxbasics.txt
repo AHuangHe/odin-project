@@ -33,4 +33,14 @@ Flex container and Flex items
 
 - To create a (flexbox) grid, we need the flex-wrap property
 - It forces items that don't fit to get pumbed down to the next row
-- 
+
+Flex containers
+- We can transform flexbox rows into columns using only 1 line of code: flex-direction (column and row)
+- Changing the alignment also rotates the direction of justify-content property (now becomes vertical alignment)
+- To horizontally center our column, we need to define the align-items property
+- The flex-direction property also lets you control the order of items (row-reverse and column-reverse)
+- In a row-reverse, for example, the reversing only happens in a per row basis
+  - So, if there are 2 rows after wrapping, the first row will be reversed independently of the second row
+- The column-reverse value is particularly useful for mobile layouts
+- Always separate content from presentation:
+  - Changing the order like this is purely presentational, but your html should still make sense without these styles applied
