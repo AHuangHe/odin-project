@@ -1,0 +1,9 @@
+Growing and Shrinking
+- The flex property is a shorthand for 3 properties: flex-grow, flex-shrink, and flex-basis
+- A value of 1 equates to flex-grow: 1, flex-shrink: 1, flex-basis: 0
+- When applying flex: 1 to every div, we are telling them to grow the same amount
+- Flex-grow and flex-shrink work in a similar way: the higher the value, the larger the rate of growth/shrink
+- Flex-basis sets the initial size of a flex item, any grow/shrink starts from this baseline
+  - Setting it to auto tells the item to check for a width declaration
+  - The default value is auto, but once you set a single value to flex, its value becomes 0
+  - A value of flex: auto is interpreted as flex: 1 1 auto
