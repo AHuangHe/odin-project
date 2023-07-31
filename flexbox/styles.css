@@ -76,3 +76,26 @@
   align-self: flex-end;
   margin-bottom: 20px;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial; /* without this, flex: 1 would be inherited from the container property*/
+  width: 300px;
+}
+
+.signup {
+  margin-left: auto; /* makes signup move all the way to the left, respecting the leftmost elements (login in this case */
+}
