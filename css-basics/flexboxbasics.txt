@@ -30,3 +30,7 @@ Flex container and Flex items
     - flex-end (bottom)
     - stretch (fills the whole space vertically)
     - baseline
+
+- To create a (flexbox) grid, we need the flex-wrap property
+- It forces items that don't fit to get pumbed down to the next row
+- 
