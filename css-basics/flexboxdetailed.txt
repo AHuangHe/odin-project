@@ -7,6 +7,15 @@ Growing and Shrinking
   - Setting it to auto tells the item to check for a width declaration
   - The default value is auto, but once you set a single value to flex, its value becomes 0
   - A value of flex: auto is interpreted as flex: 1 1 auto
+- In simple terms, In a Flex row, flex-basis = width and in a Flex column, flex-basis = height, both pegged to the primary axis
+- The minimum size gotcha
+  - For an element containing text, the minimum width is the length of the longest unbreakable string of characters
+  - That means that if an item has a really long string and the container shrinks below a certain point,
+    no matter what value of flex-shrink you put, the child item will always cause an overflow
+  - To prevent this from happening, we can redefine the minimum size with the min-width property
+  - By setting min-width to say 0px, we can allow a child item to shrink as much as necessary
+  - The same can work in Flex columns with the min-height property
+  - Be cautious with min-width, it is meant to act as a guardrail to prevent something even worse from happening, but the content can still break (really badly)
 
 Axes (flex-direction property)
 - A flexbox can work horizontally (the default) or vertically
@@ -14,3 +23,29 @@ Axes (flex-direction property)
   - Empty divs by default have 0 height, so if we set flex to 1, we are setting flex-basis to 0, which tells the div to start the height at 0
   - All the 3 properties now affect the height and not the width
   - Changin the div to column adds complexity because block-level elements default to the height of their content, and if there is no content then the above issue could happen
+
+Alignment
+- The justify-content property aligns items across the main axis
+- To change the placement of items along the cross axis use align-items
+- Because these properties are based on the main and cross axis, their behavior changes when you change the flex-direction of a flex-container
+- Setting the gap property on a flex container simply adds a specified space between flex items
+  - Very recent property, but it works reliably in all modern browsers
+  - It can be very useful for things like navigation headers
+- Justify-content and align-items share some values (flex-start, center, and flex-end)
+- The property align-self is applied to the child element, not the container
+- Both align-self and align-items share the same values
+- The fundamental difference between the main axis and the cross axis is that: 
+  - An item in the cross axix can do whatever it wants
+  - An item in the primary axis can be modified, but taking into account how the group will be distributed
+- In a Flow layout, width is a hard constraint. However, in a Flexbox layout, width is only a suggestion
+- Auto margins
+  - The margin property is used to add space around a specific element
+  - In some layout modes, like Flow and Positioned, it can be used to center an item/element with margin: auto
+  - Auto margins will gobble up extra space and apply it to the element's margin, giving precise control over where to distribute extra space
+  - Setting margin-right: to auto to the first item in a list will gather up all the extra space and force it between the 1st and 2nd item
+- Wrapping
+  - Allows us to work beyond a single row/column
+  - When we set flex-wrap: wrap, items won't shrink below their hypothetical size (at least, when we can wrap onto the next row/column)
+  - With flex-wrap: wrap, we no longer have a single primary axis line (each row acts as its own mini flex container)
+  - If we want to align the rows themselves, we can use the align-content property
+  
