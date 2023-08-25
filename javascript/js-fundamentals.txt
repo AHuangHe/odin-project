@@ -23,3 +23,30 @@ Fundamentals I
     - For constants evaluated in run-time, use the regular naming system
   - Use human-readable names for variables
   - Make names maximally descriptive and concise
+
+- Numbers
+  - Operations
+    - Addition: +
+    - Subtraction: -
+    - Multiplication: *
+    - Exponentiation: **
+    - Division: /
+    - Modulus: %
+    - Increment: ++
+    - Decrement: --
+  - Operator Precedence
+    - PEMDAS
+  - Special values (of type number)
+    - NaN: Not a Number
+    - Infinity: value returned if a number calculated is outside the largest possible number
+  - Different Bases
+    - 0x___: Hex number
+    - We can use the .toString(base) method to output numbers from base 2 to base 36
+      - myNumber.toString(base);
+  - Numbers as Objects
+    - We can define numbers as objects (instead of literals) by using the keyword new:
+      - let y - new Number(123);
+    - However, number objects can produce unexpected results, so don't use them
+  - Comparison operators:
+    - The == operator performs a loose equality comparison that performs type coercion if necessary to make the comparison possible
+    - The === operator performs a strict equality comparison (operands need to have the same type and value to return true)
