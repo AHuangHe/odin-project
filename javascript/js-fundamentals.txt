@@ -50,3 +50,83 @@ Fundamentals I
   - Comparison operators:
     - The == operator performs a loose equality comparison that performs type coercion if necessary to make the comparison possible
     - The === operator performs a strict equality comparison (operands need to have the same type and value to return true)
+
+Fundamentals II
+- There are eight main data types in JavaScript:
+  - number, bigInt, string, boolean, null, undefined, object, and symbol
+
+- Strings
+  - strings are immutable (they can only be replaced)
+  - All the methods below return a new string, they don't modify the original one
+  - Common String methods:
+    - length
+    - slice(start, end), substring(start, end), substr(start, length)
+      - slice and substring are similar, but substring treats all negative values are 0
+    - replace(toreplace, replacewith) and replaceAll()
+      - only replaces the first match and is case sensitive
+      - we can use regexes /g (for multiple matches) /i for any casing
+        - regexes are written without quotes (i.e. "hello" -> /hello/i)
+    - toUpperCase() and toLowerCase()
+    - concat(string1, string2) same as using + operator for strings
+    - trim()
+      - removes whitespace from both sides of a string
+      - trimStart() and trimEnd() have also been added recently
+    - padStart() and padEnd()
+      - we can add padding with length and a specific char (num, "char")
+      - note that these are string methods and not number methods
+    - charAt(position), charCodeAt(position), property access [ ]
+      - charCodeAt returns the unicode (UTF-16) of the character at the position
+      - property access might be a little unpredictable
+        - makes strings look like arrays
+        - returns undefined if no character is found (charAt returns the empty string)
+        - it is read only
+    - split()
+      - converts a string to an array
+
+- Conditionals
+  - if, else, else if, and switch
+  - syntax:
+    - if (condition) { // block of code } 
+    - else if (condition) { // block of code }
+    - else { // block of code }
+  - Operators
+    - OR: ||
+      - Evaluates operands from left to right
+      - For each operand, converts it to boolean
+      - If the result is true, stops and returns the original value of that operand
+      - If all operands have been evaluated (all false), returns the last operand
+    - AND: &&
+      - Evaluates operands from left to right
+      - For each operand, converts it to boolean
+      - If the result is false, stops and returns the original value of that operand
+      - If all operands have been evaluated (all true), returns the last operand
+      - * It has a higher precedence than OR *
+      - * for the case 2 && 3, it will return 3 (the higher value)
+    - NOT: !
+      - Converts the operand to boolean type
+      - Returns the inverse value
+      - We can use double NOT (!!) to convert a value to boolean type
+
+  - * Any value that is not false, undefined, null, 0, NaN, or an empty string ('') 
+      actually returns true when tested as a conditional statement *
+  - Switch statement
+    - Good for cases where you just want to set a variable to a certain choice of value
+      and print out a particular statement depending on a condition
+    - switch (expression) {
+        case choice1:
+          // code
+          break;
+        case choice2:
+          // code
+          break;
+        ...
+        default:
+          // run this if no matches
+          break;
+      }
+  - Ternary operator
+    - tests a condition and returns one value/expression if true and another if false
+    - useful for some situations and takes up less code than if...else
+    - i.e. condition ? run this code if true : run this code otherwise
+
+    
