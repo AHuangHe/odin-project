@@ -1,0 +1,25 @@
+Fundamentals I
+- We can include JavaScript code in an html file inside the <script></script> section
+- console.log() is the command to print something to the developer console in your browser
+- Another way to include JavaScript in a webpage is through an external script
+  - <script src="javascript.js"></script>
+
+- Variables
+  - We can declare variables in three var, let, and const
+  - Used to be only var, but now let and const are better ways to declare variables
+  - We can declare multiple variables in one line, but for the sake of readability, do it line by line
+  - We can also declare two variables and copy data from one into the other
+  - Declaring a variable twice triggers an error
+  - Variable naming limitations:
+    - name must contain only letters, digits, or the symbols $ and _
+    - the first character must not be a digit
+    - camelCase is commonly used
+    - case matters
+  - Constants
+    - We can declare unchanging variables with const
+    - Uppercase Constants
+      - Use all capital letters and underscores for difficult-to-remember values
+      - capital-named constants are only used as aliases for "hard-coded" values
+    - For constants evaluated in run-time, use the regular naming system
+  - Use human-readable names for variables
+  - Make names maximally descriptive and concise
