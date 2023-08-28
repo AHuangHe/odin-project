@@ -129,4 +129,19 @@ Fundamentals II
     - useful for some situations and takes up less code than if...else
     - i.e. condition ? run this code if true : run this code otherwise
 
-    
+Fundamentals III
+- Functions
+  - Divided into:
+    - function keyword
+    - name of the function
+    - parameters of the function (inside parenthesis)
+    - expression to evaluate and return (inside curly braces)
+  - i.e.: function name (param1, param2) {/do_something and return}
+- Function Expressions
+  - Similar to a function declaration, but the function only exists right after the let func = function ()
+  - In other words, a declared function can be called even before the declaration because javascript will find it first before executing the code
+- Arrow Function
+  - We can simplify function expressions by removing the keyword function and adding an arrow (=>) to indicate the expression to evaluate and return
+  - i.e. let func = function (param) { /do_something };
+    can be rewritten as: let func = param => /do_something;
+  - for multiline arrow functions, we have to use {}; after the arrow and we need to explicitly type a return
