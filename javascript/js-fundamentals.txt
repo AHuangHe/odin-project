@@ -145,3 +145,38 @@ Fundamentals III
   - i.e. let func = function (param) { /do_something };
     can be rewritten as: let func = param => /do_something;
   - for multiline arrow functions, we have to use {}; after the arrow and we need to explicitly type a return
+
+Understanding Errors
+- An error is a type of object built into the JS language
+- They consist of a name/type and a message
+- ReferenceError
+  - This error is thrown when one refers to a variable that is not declared and/or initialized within the current scope
+  - ReferenceError: x is not defined at ...
+  - ReferenceError: can't access lexical declaration 'X' before initialization
+- Another important part of an error is the stack trace
+- The stack trace helps you understand when the error was thrown and what functions were called that led up to the error
+- Common types of errors
+  - Syntax error
+    - It happens when the code you are trying to run is not written correctly (bad grammar)
+  - Reference error
+    - It happens when whatever variable you are trying to reference does not exist (within the current scope)
+      or if it has been spelled incorrectly
+  - Type error
+    - It happens when:
+      - An operand or argument passed to a function is incompatible with the type expected by that operator or function
+      - Attempting to modify a value that can't be changed
+      - Attempting to use a value in an inappropriate way
+    - i.e. using a method for an array (like .push) on a string
+    - Try to keep in mind the data type you are trying to run a method or operator against when faced with a TypeError
+  - Logic error
+    - Not an error that involves actual code errors
+    - It happens when the result the code returns is not what you expected it to be
+    - Program runs successfully, but gives incorrect results 
+- Tips for resolving errors
+  - Read the error carefully and try to understand it
+  - Google the error
+  - Use the debugger - set breakpoints, view values of variables at any point, step through code line by line
+  - Make use of console.log() for quick debugging (as well as console.table(), console.trace(), etc.)
+- Errors vs. warnings
+  - Errors will stop the execution of a running program/process
+  - Warnings provide insight on potential problems that may not crash the program
