@@ -180,3 +180,44 @@ Understanding Errors
 - Errors vs. warnings
   - Errors will stop the execution of a running program/process
   - Warnings provide insight on potential problems that may not crash the program
+
+Fundamentals IV
+- Arrays
+  - Syntax: const array_name = [item1, item2, ...];
+  - It is common practice to declare arrays with the const keyword
+  - A declaration can be multiple lines
+  - You can also create an array and then provide the elements
+  - Another way of creating arrays:
+    - const array_name = new Array(item1, item2, ...);
+    - It behaves exactly as an array literal so just declare array literals
+  - We can change array elements: array[0] = new_value;
+  - We can also convert an Array to a String with the toString() method
+  - We can access the full array by referring to its name
+  - Arrays are a special type of objects 
+    - Arrays use numbers to access its elements
+      - array[0]
+    - Objects use names to access its members
+      - object.element
+  - Array elements can be objects
+    - You can have variables of different types in the same Array
+      - i.e. objects, functions, and other arrays
+  - Built-In Properties and Methods
+    - length
+    - sort()
+    - forEach() -> we can loop through the array without having to use a for loop
+    - push() -> easiest way to add a new element to an array
+    - We can also add elements this way: array[array.length] = value;
+    - Adding elements with higher indexes can create undefined holes in an array
+  - Associative Arrays
+    - In other languages, we can name indexes of an array (hashes)
+    - JavaScript does NOT support arrays with named indexes (always uses numbered indexes)
+  - Arrays vs. Objects
+    - In JS, arrays use numbered indexes while objects use named indexes
+      - Object: const obj = {index1: value1, index2: value2, ...}
+  - When creating arrays with "new Array()", 
+    you can accidentally create an array with x undefined elements if you use a single number
+    - i.e. const arr = new Array(40); // will create 40 undefined elements
+      as opposed to: const arr = new Array(40, 1) // will create an array with 40 and 1 as elements
+  - We can check if an object is an array with:
+    - the isArray() method
+    - my_array instanceof Array;
