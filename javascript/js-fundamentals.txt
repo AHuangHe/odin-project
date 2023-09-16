@@ -221,3 +221,24 @@ Fundamentals IV
   - We can check if an object is an array with:
     - the isArray() method
     - my_array instanceof Array;
+- Array Methods
+  - length
+  - toString()
+  - pop() - removes last element
+  - push() - adds element at the end
+  - shift() - removes first element and shifts all other elements to a lower index
+  - unshift() - adds an element at the beginning and unshifts older elements
+  - index accessing with array[number]
+  - alternative to push array[array.length] = value
+  - delete() - removes element but it leaves an undefined hole
+  - concat() - merging arrays: newArray = array1.concat(array2, array3, ...)
+             - can also take strings as arguments
+  - flat() - reduces the dimensionality of an array
+  - splice() - adds new items to an array
+    - first parameter: position where new elements should be added
+    - second parameter: how many elements to be removed
+    - rest of the parameters: elements to be added
+    - We can remove elements without leaving holes in the array: splice(0, 1)
+  - slice() - slices out a piece of an array
+    - creates a new array
+    - slice(2) -> create new array starting from index 2 until the end
