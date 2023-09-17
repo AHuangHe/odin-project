@@ -262,3 +262,7 @@ Fundamentals IV
         final-expression
       }
     - The do...while loop is similar but it executes the code at least once
+- Test Driven Development
+  - The practice of writing automated tests that describe how your code should work
+    before you actually write the code
+  - Example: writing a test for addition calling a function before the function is even implemented
