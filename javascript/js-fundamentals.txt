@@ -242,3 +242,23 @@ Fundamentals IV
   - slice() - slices out a piece of an array
     - creates a new array
     - slice(2) -> create new array starting from index 2 until the end
+- Loops
+  - Standard For Loop: for(let i = 0; i < 10; i++){}
+  - Collection For Loop:
+    - const items = [item1, item2, ...]
+    - for(const item in items) {}
+  - Specialized For loops
+    - map() - do something to each item in a collection and create a new collection
+    - filter() - test each item in a collection and create new collection with matching items
+  - Break statements to end the for loop earlier
+    - We can add labels (i.e. outer: for()...) to loops and break at a specific for loop
+  - Continue statements to skip an entire iteration of the loop
+    - We can also use continue with labels
+  - While and Do...while
+      initializer
+      while (condition){
+        // code to run
+
+        final-expression
+      }
+    - The do...while loop is similar but it executes the code at least once
